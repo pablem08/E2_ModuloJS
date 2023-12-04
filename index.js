@@ -36,7 +36,7 @@ const pizzas = [
   {
     id: 5,
     nombre: "pizza Especial",
-    precio: 1000,
+    precio: 550,
     ingredientes: ["Muzzarella", "Tomate", "Aceitunas", "Anchoas", "Cebolla"],
   },
 
@@ -48,7 +48,7 @@ const pizzas = [
   },
 ];
 
-//Ejercicio A
+//Ejercicio A : Las pizzas que tengan un id impar.
 console.log("Ejercicio a) :");
 console.log("Las pizzas que tienen un id impar son: ");
 pizzas.forEach((pizza) => {
@@ -61,12 +61,12 @@ console.log(
   "---------------------------------------------------------------------------------------------------------------"
 );
 
-//Ejercicio B
+//Ejercicio B: Responder: ¿Hay alguna pizza que valga menos de $600?
 console.log("Ejercicio b) :");
 console.log("Pizza/s con un valor menor de $600 :");
 pizzas.forEach((pizza) => {
   if (pizza.precio < 600) {
-    console.log(pizza.nombre);
+    console.log(`${pizza.nombre} con un valor de $${pizza.precio}`);
   }
 });
 
@@ -74,24 +74,21 @@ console.log(
   "---------------------------------------------------------------------------------------------------------------"
 );
 
-//Ejercicio C
+//Ejercicio C: El nombre de cada pizza con su respectivo precio.
 console.log("Ejercicio c) :");
 pizzas.forEach((pizza) => {
   console.log(`La ${pizza.nombre} , tiene un  valor de $${pizza.precio}`);
 });
 
-
 console.log(
   "---------------------------------------------------------------------------------------------------------------"
 );
 
-//Ejercicio D
+//Ejercicio D: Todos los ingredientes de cada pizza (En cada iteración imprimir los ingredientes de la pizza que se esta recorriendo). Ayuda: van a tener que realizar dos recorridos, ya que cada pizza del array de pizzas tiene una propiedad "ingredientes" cuyo valor es un array con ingredientes.
 console.log("Ejercicio d) :");
-pizzas.forEach(pizza => {
-  console.log(`La ${pizza.nombre} tiene los ingredientes:`)
-  pizza.ingredientes.forEach(ingrediente =>{
-    console.log(ingrediente)
-  })
-})
-
-
+pizzas.forEach((pizza) => {
+  console.log(`La ${pizza.nombre} tiene los ingredientes:`);
+  pizza.ingredientes.forEach((ingrediente) => {
+    console.log(ingrediente);
+  });
+});
